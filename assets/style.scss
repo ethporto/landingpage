@@ -1,0 +1,99 @@
+
+
+$base-color: #22709C;
+
+@font-face {
+  font-family: space;
+  src: url(SpaceGrotesk-VariableFont_wght.ttf);
+}
+
+
+
+* {
+  box-sizing: border-box;
+  font-family: space, Ubuntu, "Helvetica Neue",  Arial, sans-serif;
+  margin: auto;
+}
+
+body{
+  background: $base-color;
+}
+
+.backdrop {
+  animation-name: backdrop_enter;
+  animation-duration: 2s;
+  position: relative;
+  &::before, &::after{
+    position: absolute;
+    background-image: url("backdrop.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center right;
+    content: "";
+    top: 0;
+    width: 50%;
+    height: 100vh;
+    animation-name: backdrop_anime1;
+    animation-duration: 2s;
+    left: 0;
+  }
+  &::after{
+    left: 50%;
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+
+  }
+}
+
+@keyframes backdrop_enter {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes backdrop_anime1 {
+  from {background-size: cover;}
+  to {background-size: cover;}
+}
+
+
+.container {
+ max-width: 900px;
+ position: relative;
+ z-index: 2;
+ margin: 0 auto;
+ padding: 1rem;
+
+ figure{
+  width: 100%;
+  display: flex;
+  
+ }
+ 
+}
+
+.logo_eth{
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 0;
+  animation-name: logo_anime;
+  animation-duration: 10s;
+}
+
+@keyframes logo_anime {
+  from {stroke-dashoffset: 1000;}
+  to {stroke-dashoffset: 0;}
+}
+
+
+
+@media screen and (max-width: 1024px) {
+   
+}
+
+@media screen and (max-width: 600px) {
+
+
+}
