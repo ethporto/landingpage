@@ -10,6 +10,7 @@
 
 body {
   background: #22709C;
+  color: #fff;
 }
 
 .backdrop {
@@ -18,7 +19,7 @@ body {
   position: relative;
 }
 .backdrop::before, .backdrop::after {
-  position: absolute;
+  position: fixed;
   background-image: url("backdrop.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -58,7 +59,7 @@ body {
   }
 }
 .container {
-  max-width: 900px;
+  max-width: 780px;
   position: relative;
   z-index: 2;
   margin: 0 auto;
@@ -67,6 +68,35 @@ body {
 .container figure {
   width: 100%;
   display: flex;
+}
+
+h1 {
+  text-transform: uppercase;
+  word-spacing: normal;
+  letter-spacing: 3px;
+  font-variation-settings: "wght" 3000;
+  line-height: 3rem;
+  font-size: 3.2rem;
+  margin-bottom: 2rem;
+}
+h1 span {
+  display: block;
+}
+
+h2 {
+  letter-spacing: 3px;
+  font-variation-settings: "wght" 200;
+  line-height: 1.7rem;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+h3 {
+  letter-spacing: 3px;
+  font-variation-settings: "wght" 600;
+  line-height: 1.7rem;
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
 }
 
 .logo_eth {
@@ -83,4 +113,38 @@ body {
   to {
     stroke-dashoffset: 0;
   }
+}
+.inner_container {
+  display: flex;
+}
+
+.leftside, .rightside {
+  width: 50%;
+  padding: 1rem;
+  margin: 0;
+}
+
+.leftside {
+  border-right: 2px solid #fff;
+  text-align: right;
+}
+.leftside p {
+  margin-top: 5rem;
+}
+
+.rightside ul {
+  margin: 8rem 0 0 0;
+  padding: 0;
+  list-style: none;
+}
+.rightside ul li {
+  margin: 0;
+  padding: 0;
+  color: #BFD3F1;
+  text-transform: uppercase;
+  font-variation-settings: "wght" 100;
+  line-height: 1.7rem;
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 5px;
 }

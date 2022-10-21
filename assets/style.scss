@@ -1,7 +1,8 @@
 
 
 $base-color: #22709C;
-
+$text-color: #fff;
+$secondary-color: #BFD3F1;
 @font-face {
   font-family: space;
   src: url(SpaceGrotesk-VariableFont_wght.ttf);
@@ -17,6 +18,7 @@ $base-color: #22709C;
 
 body{
   background: $base-color;
+  color: $text-color;
 }
 
 .backdrop {
@@ -24,7 +26,7 @@ body{
   animation-duration: 2s;
   position: relative;
   &::before, &::after{
-    position: absolute;
+    position: fixed;
     background-image: url("backdrop.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -61,7 +63,7 @@ body{
 
 
 .container {
- max-width: 900px;
+ max-width: 780px;
  position: relative;
  z-index: 2;
  margin: 0 auto;
@@ -75,6 +77,34 @@ body{
  
 }
 
+h1{
+  text-transform: uppercase;
+  word-spacing: normal;
+  letter-spacing: 3px;
+  font-variation-settings: 'wght' 3000;
+  line-height: 3rem;
+  font-size: 3.2rem;
+  margin-bottom: 2rem;
+  span{
+    display: block;
+  }
+}
+h2{
+  letter-spacing: 3px;
+  font-variation-settings: 'wght' 200;
+  line-height: 1.7rem;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+h3{
+  letter-spacing: 3px;
+  font-variation-settings: 'wght' 600;
+  line-height: 1.7rem;
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+
 .logo_eth{
   stroke-dasharray: 1000;
   stroke-dashoffset: 0;
@@ -85,6 +115,44 @@ body{
 @keyframes logo_anime {
   from {stroke-dashoffset: 1000;}
   to {stroke-dashoffset: 0;}
+}
+
+.inner_container{
+  display: flex;
+}
+
+.leftside, .rightside{
+  width: 50%;
+  padding: 1rem;
+  margin: 0;
+}
+.leftside{
+  border-right: 2px solid $text-color;
+  text-align: right;
+
+  p{
+    margin-top: 5rem;
+  }
+
+}
+
+.rightside{
+  ul{
+    margin: 8rem 0 0 0;
+    padding: 0;
+    list-style: none;
+    li{
+      margin: 0;
+      padding: 0;
+      color: $secondary-color;
+      text-transform: uppercase;
+      font-variation-settings: 'wght' 100;
+      line-height: 1.7rem;
+      font-size: 1.6rem;
+      margin-bottom: 0.5rem;
+      letter-spacing: 5px;
+    }
+  }
 }
 
 
