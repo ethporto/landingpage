@@ -10,7 +10,11 @@
 
 body {
   background: #22709C;
-  color: #fff;
+  color: #F1DDBF;
+}
+
+a {
+  color: #F1DDBF;
 }
 
 .backdrop {
@@ -62,7 +66,7 @@ body {
   max-width: 780px;
   position: relative;
   z-index: 2;
-  margin: 0 auto;
+  margin: 6rem auto 0;
   padding: 1rem;
 }
 .container figure {
@@ -125,13 +129,16 @@ h3 {
 }
 
 .leftside {
-  border-right: 2px solid #fff;
+  border-right: 2px solid #F1DDBF;
   text-align: right;
 }
 .leftside p {
   margin-top: 5rem;
 }
 
+.rightside {
+  padding-bottom: 10rem;
+}
 .rightside ul {
   margin: 8rem 0 0 0;
   padding: 0;
@@ -140,11 +147,153 @@ h3 {
 .rightside ul li {
   margin: 0;
   padding: 0;
-  color: #BFD3F1;
+  color: #F1DDBF;
   text-transform: uppercase;
   font-variation-settings: "wght" 100;
   line-height: 1.7rem;
   font-size: 1.6rem;
   margin-bottom: 0.5rem;
   letter-spacing: 5px;
+}
+
+.formtop1 {
+  margin-top: 18rem;
+}
+
+.formtop2 {
+  margin-top: 10rem;
+}
+
+.afterline {
+  display: flex;
+}
+.afterline a {
+  text-decoration: none;
+  border: 1px solid #F1DDBF;
+  padding: 0.6rem 2rem;
+  border-radius: 4px;
+  line-height: 1.5rem;
+}
+.afterline a img {
+  margin-right: 0.5rem;
+  padding-top: 0.2rem;
+  height: 1.1rem;
+}
+.afterline a:hover, .afterline a:active {
+  background-color: #1E1E44;
+}
+
+.full_container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.from_right, .from_left {
+  width: 100%;
+  margin: 4rem 0;
+}
+.from_right span, .from_left span {
+  background-color: #F1DDBF;
+  display: block;
+  height: 1px;
+  width: 100%;
+  margin: 0.6rem 0;
+}
+.from_right h4, .from_left h4 {
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  width: 100%;
+}
+.from_right p, .from_left p {
+  max-width: 400px;
+  width: 100%;
+  margin: 0;
+}
+
+.from_left {
+  padding-right: 30%;
+  text-align: right;
+}
+
+.from_right {
+  padding-left: 30%;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-content: center;
+  align-items: flex-start;
+}
+
+.list_people {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-content: center;
+  align-items: flex-start;
+}
+.list_people li {
+  padding: 0.5rem;
+  margin: 0;
+}
+.list_people a {
+  position: relative;
+  display: block;
+}
+.list_people a:hover {
+  transition: all 4s;
+}
+.list_people a:hover:after {
+  opacity: 1;
+  transition: all 0.5s;
+}
+.list_people a:after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 66px;
+  height: 66px;
+  border-radius: 10000px;
+  background-image: url(/assets/twitter.svg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  content: "";
+  background-color: rgba(0, 0, 0, 0.61);
+  z-index: 8;
+  opacity: 0;
+  transition: all 0.7s;
+}
+.list_people figure {
+  width: 66px;
+  border-radius: 1000px;
+}
+.list_people figure img {
+  width: 66px;
+  border-radius: 1000px;
+}
+.list_people p {
+  letter-spacing: 0px;
+  font-size: 0.7rem;
+  padding: 0.4rem;
+  text-align: center;
+}
+
+.guita {
+  list-style: none;
+  display: flex;
+  margin: 0;
+}
+.guita li {
+  padding: 0.5rem;
+  margin: 0;
+}
+.guita li a {
+  display: block;
+}
+.guita li a:hover {
+  opacity: 0.9;
 }

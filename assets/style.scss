@@ -1,8 +1,10 @@
 
 
 $base-color: #22709C;
-$text-color: #fff;
+$text-color: #F1DDBF;
 $secondary-color: #BFD3F1;
+$hover-color:#1E1E44;
+$avatar-size:66px;
 @font-face {
   font-family: space;
   src: url(SpaceGrotesk-VariableFont_wght.ttf);
@@ -18,6 +20,10 @@ $secondary-color: #BFD3F1;
 
 body{
   background: $base-color;
+  color: $text-color;
+}
+
+a{
   color: $text-color;
 }
 
@@ -66,7 +72,7 @@ body{
  max-width: 780px;
  position: relative;
  z-index: 2;
- margin: 0 auto;
+ margin: 6rem auto 0;
  padding: 1rem;
 
  figure{
@@ -137,6 +143,7 @@ h3{
 }
 
 .rightside{
+  padding-bottom: 10rem;
   ul{
     margin: 8rem 0 0 0;
     padding: 0;
@@ -144,13 +151,155 @@ h3{
     li{
       margin: 0;
       padding: 0;
-      color: $secondary-color;
+      color: $text-color;
       text-transform: uppercase;
       font-variation-settings: 'wght' 100;
       line-height: 1.7rem;
       font-size: 1.6rem;
       margin-bottom: 0.5rem;
       letter-spacing: 5px;
+    }
+  }
+}
+
+.formtop1{
+  margin-top: 18rem;
+}
+.formtop2{
+  margin-top: 10rem;
+}
+
+.afterline{
+  display: flex;
+  a{
+    text-decoration: none;
+    border: 1px solid $text-color;
+    padding: 0.6rem 2rem;
+    border-radius: 4px;
+    line-height: 1.5rem;
+    img{
+      margin-right: 0.5rem;
+      padding-top: 0.2rem;
+      height: 1.1rem;
+    }
+    &:hover, &:active{
+      background-color: $hover-color;
+    }
+  }
+}
+
+.full_container{
+  position: relative;
+ z-index: 2;
+ display: flex;
+ flex-direction: column;
+}
+
+.from_right, .from_left{
+  width: 100%;
+  margin: 4rem 0;
+  span{
+    background-color: $text-color;
+    display: block;
+    height: 1px;
+    width: 100%;
+    margin: 0.6rem 0;
+  }
+  h4{
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    width: 100%;
+  }
+  p{
+   max-width: 400px;
+    width: 100%;
+    margin: 0;
+  }
+}
+
+.from_left{
+  padding-right: 30%;
+  text-align: right;
+}
+
+.from_right{
+padding-left: 30%;
+display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: center;
+    align-items: flex-start;
+}
+
+.list_people{
+  list-style: none;
+  display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: center;
+    align-items: flex-start;
+  li{
+    padding: 0.5rem ;
+    margin: 0;
+  }
+  a{
+    position: relative;
+    display: block;
+    &:hover{
+      transition: all 4s;
+      &:after{
+        opacity: 1;
+        transition: all 0.5s;
+      }
+    }
+    &:after{
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: $avatar-size;
+      height: $avatar-size;
+      border-radius: 10000px;
+      background-image: url(/assets/twitter.svg);
+      background-position: center center;
+      background-repeat: no-repeat;
+      content: "";
+      background-color: rgba(0, 0, 0, 0.61);
+      z-index: 8;
+      opacity: 0;
+      transition: all 0.7s;
+    }
+
+  }
+  figure{
+    width: $avatar-size;
+    border-radius: 1000px;
+    img{
+      width: $avatar-size;
+      border-radius: 1000px;
+    }
+  }
+  p{
+    letter-spacing: 0px;
+    font-size: 0.7rem;
+    padding: 0.4rem;
+    text-align: center;
+  }
+}
+
+.guita{
+  list-style: none;
+  display: flex;
+  margin: 0;
+  li{
+    padding: 0.5rem;
+    margin: 0;
+    a{
+      display: block;
+      &:hover{
+        opacity: 0.9;
+      }
     }
   }
 }
