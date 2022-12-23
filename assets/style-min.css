@@ -18,7 +18,9 @@ a {
 }
 
 .backdrop {
+  -webkit-animation-name: backdrop_enter;
   animation-name: backdrop_enter;
+  -webkit-animation-duration: 2s;
   animation-duration: 2s;
   position: relative;
 }
@@ -33,18 +35,28 @@ a {
   top: 0;
   width: 51%;
   height: 100vh;
+  -webkit-animation-name: backdrop_anime1;
   animation-name: backdrop_anime1;
+  -webkit-animation-duration: 2s;
   animation-duration: 2s;
   left: 0;
 }
 .backdrop::after {
   left: 50%;
-  -moz-transform: scaleX(-1);
-  -o-transform: scaleX(-1);
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
+  -webkit-filter: FlipH;
   filter: FlipH;
   -ms-filter: "FlipH";
+}
+
+@-webkit-keyframes backdrop_enter {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes backdrop_enter {
@@ -53,6 +65,14 @@ a {
   }
   to {
     opacity: 1;
+  }
+}
+@-webkit-keyframes backdrop_anime1 {
+  from {
+    background-size: cover;
+  }
+  to {
+    background-size: cover;
   }
 }
 @keyframes backdrop_anime1 {
@@ -115,8 +135,19 @@ h3 {
 .logo_eth {
   stroke-dasharray: 1000;
   stroke-dashoffset: 0;
+  -webkit-animation-name: logo_anime;
   animation-name: logo_anime;
+  -webkit-animation-duration: 10s;
   animation-duration: 10s;
+}
+
+@-webkit-keyframes logo_anime {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
 }
 
 @keyframes logo_anime {
