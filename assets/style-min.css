@@ -348,6 +348,10 @@ h3 {
   text-align: center;
 }
 
+.list_people.no_twitter a:after{
+  display: none;
+}
+
 .guita {
   list-style: none;
   display: flex;
