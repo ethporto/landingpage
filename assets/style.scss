@@ -21,8 +21,8 @@ a {
   animation-name: backdrop_enter;
   animation-duration: 2s;
   position: relative;
-}
 
+}
 .backdrop::before,
 .backdrop::after {
   position: fixed;
@@ -38,7 +38,6 @@ a {
   animation-duration: 2s;
   left: 0;
 }
-
 .backdrop::after {
   left: 50%;
   -moz-transform: scaleX(-1);
@@ -65,7 +64,8 @@ a {
     background-size: cover;
   }
 }
-.header {
+
+.header{
   z-index: 10;
   position: relative;
   text-align: center;
@@ -79,7 +79,6 @@ a {
   margin: 0rem auto 0;
   padding: 1rem;
 }
-
 .container figure {
   width: 100%;
   display: flex;
@@ -94,6 +93,9 @@ h1 {
   font-size: 3.2rem;
   margin-bottom: 1rem;
 }
+h1 span {
+  
+}
 
 h2 {
   letter-spacing: 3px;
@@ -102,6 +104,8 @@ h2 {
   font-size: 1rem;
   margin-bottom: 2rem;
 }
+
+
 
 h3 {
   letter-spacing: 3px;
@@ -112,11 +116,13 @@ h3 {
 }
 
 @media screen and (min-width: 580px) {
-  h3 {
+  h3{
     line-height: 1.7rem;
-    font-size: 1.5rem;
+  font-size: 1.5rem;
   }
+  
 }
+
 .logo_eth {
   stroke-dasharray: 1000;
   stroke-dashoffset: 0;
@@ -148,7 +154,6 @@ h3 {
   text-align: right;
   padding-top: 3rem;
 }
-
 .leftside p {
   margin-top: 5rem;
 }
@@ -157,13 +162,11 @@ h3 {
   padding-bottom: 10rem;
   padding-top: 3rem;
 }
-
 .rightside ul {
   margin: 0 0 0 0;
   padding: 0;
   list-style: none;
 }
-
 .rightside ul li {
   margin: 0;
   padding: 0;
@@ -178,10 +181,13 @@ h3 {
 
 @media screen and (min-width: 580px) {
   .rightside ul li {
+
     font-size: 1.6rem;
     line-height: 1.7rem;
+
   }
 }
+
 .formtop1 {
   margin-top: 15rem;
 }
@@ -193,7 +199,6 @@ h3 {
 .afterline {
   display: flex;
 }
-
 .afterline a {
   text-decoration: none;
   border: 1px solid #f1ddbf;
@@ -202,13 +207,11 @@ h3 {
   line-height: 1.5rem;
   text-align: center;
 }
-
 .afterline a img {
   margin-right: 0.5rem;
   padding-top: 0.2rem;
   height: 1.1rem;
 }
-
 .afterline a:hover,
 .afterline a:active {
   background-color: #1e1e44;
@@ -226,7 +229,6 @@ h3 {
   width: 100%;
   margin: 4rem 0;
 }
-
 .from_right span,
 .from_left span {
   background-color: #f1ddbf;
@@ -235,14 +237,12 @@ h3 {
   width: 100%;
   margin: 0.6rem 0;
 }
-
 .from_right h4,
 .from_left h4 {
   font-size: 1.5rem;
   letter-spacing: 2px;
   width: 100%;
 }
-
 .from_right p,
 .from_left p {
   max-width: 400px;
@@ -274,26 +274,21 @@ h3 {
   align-content: center;
   align-items: flex-start;
 }
-
 .list_people li {
   padding: 0.5rem;
   margin: 0;
 }
-
 .list_people a {
   position: relative;
   display: block;
 }
-
 .list_people a:hover {
   transition: all 4s;
 }
-
 .list_people a:hover:after {
   opacity: 1;
   transition: all 0.5s;
 }
-
 .list_people a:after {
   position: absolute;
   left: 0;
@@ -310,17 +305,14 @@ h3 {
   opacity: 0;
   transition: all 0.7s;
 }
-
 .list_people figure {
   width: 66px;
   border-radius: 1000px;
 }
-
 .list_people figure img {
   width: 66px;
   border-radius: 1000px;
 }
-
 .list_people p {
   letter-spacing: 0px;
   font-size: 0.7rem;
@@ -328,7 +320,7 @@ h3 {
   text-align: center;
 }
 
-.list_people.no_twitter a:after {
+.list_people.no_twitter a:after{
   display: none;
 }
 
@@ -337,39 +329,35 @@ h3 {
   display: flex;
   margin: 0;
 }
-
 .guita li {
   padding: 0.5rem;
   margin: 0;
 }
-
 .guita li a {
   display: block;
 }
-
 .guita li a:hover {
   opacity: 0.9;
 }
-
 .hide_until_twitter_is_working {
   display: none;
 }
 
-.header {
+.header{
   padding-top: 12rem;
 }
 
-.call_for_hack {
+.call_for_hack{
   color: #22709c;
   background: #f1ddbf;
   padding: 0.5rem 0.5rem 0.1rem;
-  position: fixed;
+position: fixed;
   z-index: 20;
   width: 100%;
   text-align: center;
 }
 
-.call_for_hack::before {
+.call_for_hack::before{
   left: 0;
   width: 100%;
   height: 196px;
@@ -382,13 +370,13 @@ h3 {
   bottom: -196px;
 }
 
-.call_container {
-  border-bottom: rgba(34, 112, 157, 0.1725490196) 1px solid;
-  padding: 0 0 0.6rem 0;
-  margin-bottom: 0.4rem;
+.call_container{
+ border-bottom: #22709d2c 1px solid;
+ padding: 0 0 0.6rem 0;
+ margin-bottom: 0.4rem;
 }
 
-.call_for_hack h2 {
+.call_for_hack h2{
   font-size: 1.2rem;
   font-weight: bold;
   margin: 0;
@@ -396,7 +384,7 @@ h3 {
   font-variation-settings: "wght" 600;
 }
 
-.call_for_hack a {
+.call_for_hack a{
   background: #22709c;
   padding: 0.3rem 1rem;
   font-size: 1.1rem;
@@ -406,12 +394,11 @@ h3 {
   display: inline-block;
   margin: 0 0.2rem;
 }
-
-.call_for_hack a:hover {
+.call_for_hack a:hover{
   background: #124a6b;
 }
 
-.call_for_hack h3 {
+.call_for_hack h3{
   font-size: 0.9rem;
   font-weight: bold;
   margin: 0;
@@ -420,6 +407,6 @@ h3 {
   display: block;
 }
 
-.call_for_hack h4 {
+.call_for_hack h4{
   font-size: 0.8rem;
 }
