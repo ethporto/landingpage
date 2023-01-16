@@ -2,6 +2,13 @@
   font-family: space;
   src: url(SpaceGrotesk-VariableFont_wght.ttf);
 }
+
+$dark-blue: #020E38;
+$baby-blue: #00E5F4;
+$light-blue: #9EEAFD;
+$yeallow: #F6EC10;
+$white:#fff;
+
 * {
   box-sizing: border-box;
   font-family: space, Ubuntu, "Helvetica Neue", Arial, sans-serif;
@@ -9,44 +16,14 @@
 }
 
 body {
-  background: #22709c;
-  color: #f1ddbf;
+  background: $dark-blue;
+  color: $white;
 }
 
 a {
-  color: #f1ddbf;
+  color: $yeallow;
 }
 
-.backdrop {
-  animation-name: backdrop_enter;
-  animation-duration: 2s;
-  position: relative;
-
-}
-.backdrop::before,
-.backdrop::after {
-  position: fixed;
-  background-image: url("backdrop.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center right;
-  content: "";
-  top: 0;
-  width: 51%;
-  height: 100vh;
-  animation-name: backdrop_anime1;
-  animation-duration: 2s;
-  left: 0;
-}
-.backdrop::after {
-  left: 50%;
-  -moz-transform: scaleX(-1);
-  -o-transform: scaleX(-1);
-  -webkit-transform: scaleX(-1);
-  transform: scaleX(-1);
-  filter: FlipH;
-  -ms-filter: "FlipH";
-}
 
 @keyframes backdrop_enter {
   from {
@@ -66,10 +43,14 @@ a {
 }
 
 .header{
-  z-index: 10;
   position: relative;
   text-align: center;
-  padding: 3rem 1rem 1rem;
+  padding: 2rem;
+  img{
+   width: 100%;
+   padding-top: 2rem;
+   max-width: 1000px;
+  }
 }
 
 .container {
@@ -139,24 +120,11 @@ h3 {
   }
 }
 .inner_container {
-  display: flex;
+
 }
 
-.leftside,
-.rightside {
-  width: 50%;
-  padding: 1rem;
-  margin: 0;
-}
 
-.leftside {
-  border-right: 2px solid #f1ddbf;
-  text-align: right;
-  padding-top: 3rem;
-}
-.leftside p {
-  margin-top: 5rem;
-}
+
 
 .rightside {
   padding-bottom: 10rem;
@@ -198,6 +166,7 @@ h3 {
 
 .afterline {
   display: flex;
+  margin-top: 3rem;
 }
 .afterline a {
   text-decoration: none;
@@ -231,7 +200,7 @@ h3 {
 }
 .from_right span,
 .from_left span {
-  background-color: #f1ddbf;
+  background-color: $yeallow;
   display: block;
   height: 1px;
   width: 100%;
@@ -343,32 +312,19 @@ h3 {
   display: none;
 }
 
-.header{
-  padding-top: 12rem;
-}
+
 
 .call_for_hack{
-  color: #22709c;
-  background: #f1ddbf;
+  color: $light-blue;
+
   padding: 0.5rem 0.5rem 0.1rem;
-position: fixed;
+
   z-index: 20;
   width: 100%;
   text-align: center;
 }
 
-.call_for_hack::before{
-  left: 0;
-  width: 100%;
-  height: 196px;
-  background-image: url(/assets/arc.svg);
-  background-position: top center;
-  background-repeat: no-repeat;
-  background-size: 200% auto;
-  content: "";
-  position: absolute;
-  bottom: -196px;
-}
+
 
 .call_container{
  border-bottom: #22709d2c 1px solid;
@@ -379,15 +335,15 @@ position: fixed;
 .call_for_hack h2{
   font-size: 1.2rem;
   font-weight: bold;
-  margin: 0;
-  display: inline;
+  margin: 1rem;
   font-variation-settings: "wght" 600;
 }
 
 .call_for_hack a{
-  background: #22709c;
+  background: $yeallow;
+  color: $dark-blue;
   padding: 0.3rem 1rem;
-  font-size: 1.1rem;
+  font-size: 1.6rem;
   text-transform: uppercase;
   border-radius: 4px;
   text-decoration: none;
