@@ -124,6 +124,132 @@ h3 {
 }
 
 
+.half_content{
+  display: flex;
+}
+
+.neon_frame{
+  padding: 3rem 3rem 0 3rem;
+  margin: 2rem;
+  width: 50%;
+  border-radius: 16px;
+   position: relative;
+   z-index: 20;
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+
+  
+  // background-image: url(/assets/svg/box_neon.svg);
+  // background-position: top left;
+  // background-size: 100% 100%;
+  // background-repeat: no-repeat;
+
+  p{
+    margin-bottom: 1rem;
+    line-height: 1.5rem;
+    text-align: left;
+  }
+
+  ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li{
+      margin-bottom: 10px;
+    }
+  }
+
+  h3{
+    color: $yeallow;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  figure{
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    img{
+      width: 100%;
+    }
+  }
+
+}
+
+.neon_frame::before{
+  content: "";
+  width: 100%;
+  display: block;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  box-shadow: 0 0 10px $yeallow , inset 0 0 10px $yeallow ;
+  border: #F6EC10 2px solid;
+  border-radius: 16px;
+}
+
+ .neon_frame::after{
+  content: "";
+  width: 100px;
+  display: block;
+  height: 30px;
+  position: absolute;
+  background-color: $dark-blue;
+  right: -20px;
+  top: -15px;
+  z-index: 3;
+}
+
+.button_neon{
+  text-align: center;
+  padding: 1rem 2rem;
+  margin: 2rem 0;
+  display: inline-block;
+  text-decoration: none;
+  position: relative;
+   z-index: 20;
+   text-transform: uppercase;
+   text-shadow: 0 0 5px $yeallow;
+   letter-spacing: 2px;
+   font-size: 1.5rem;
+   font-weight: bold;
+   &:hover{
+    
+   }
+}
+
+.button_neon:before{
+  content: "";
+  width: 100%;
+  display: block;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  box-shadow: 0 0 5px $yeallow , inset 0 0 5px $yeallow ;
+  border: #F6EC10 2px solid;
+  border-radius: 8px;
+}
+
+ .button_neon:after{
+  content: "";
+  width: 100px;
+  display: block;
+  height: 12px;
+  position: absolute;
+  background-color: $dark-blue;
+  right: -20px;
+  bottom: -9px;
+  z-index: 3;
+}
+
+
+
 
 
 .rightside {
@@ -191,6 +317,7 @@ h3 {
   z-index: 2;
   display: flex;
   flex-direction: column;
+  max-width: 1200px;
 }
 
 .from_right,
