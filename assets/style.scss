@@ -33,6 +33,7 @@ a {
     opacity: 1;
   }
 }
+
 @keyframes backdrop_anime1 {
   from {
     background-size: cover;
@@ -41,6 +42,22 @@ a {
     background-size: cover;
   }
 }
+
+
+@keyframes blink {
+  0% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
+
+
+
 
 .header{
   position: relative;
@@ -165,6 +182,11 @@ h3 {
     font-size: 2rem;
     margin-bottom: 3rem;
   }
+  h4{
+    color: $light-blue;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+  }
 
   figure{
     width: 100%;
@@ -187,8 +209,8 @@ h3 {
   left: 0;
   top: 0;
   z-index: 2;
-  box-shadow: 0 0 10px $yeallow , inset 0 0 10px $yeallow ;
-  border: #F6EC10 2px solid;
+  box-shadow: 0 0 10px $light-blue , inset 0 0 10px $light-blue ;
+  border: $light-blue 2px solid;
   border-radius: 16px;
 }
 
@@ -204,6 +226,10 @@ h3 {
   z-index: 3;
 }
 
+.box_content{
+  height: 100%;
+}
+
 .button_neon{
   text-align: center;
   padding: 1rem 2rem;
@@ -215,10 +241,13 @@ h3 {
    text-transform: uppercase;
    text-shadow: 0 0 5px $yeallow;
    letter-spacing: 2px;
-   font-size: 1.5rem;
+   font-size: 1.4rem;
    font-weight: bold;
    &:hover{
-    
+    animation-name: blink;
+    animation-duration: 1s;
+    animation-fill-mode: backwards;
+    animation-iteration-count: infinite;
    }
 }
 
