@@ -68,7 +68,7 @@ body {
   }
   .nav > .nav-btn > label:hover,
   .nav #nav-check:checked ~ .nav-btn > label {
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: #020e38;
   }
   .nav > .nav-btn > label > span {
     display: block;
@@ -77,10 +77,9 @@ body {
     border-top: 2px solid #eee;
   }
   .nav > .nav-links {
-    /* position: absolute; */
     display: block;
     width: 100%;
-    background-color: #333;
+    background-color: #020e38;
     height: 0px;
     transition: all 0.3s ease-in;
     overflow-y: hidden;
@@ -100,9 +99,7 @@ body {
     height: 0px;
   }
   .nav > #nav-check:checked ~ .nav-links {
-    /* height: calc(100vh - 50px); */
     height: calc(49px * 1);
-    /* height: 100px; */
     overflow-y: auto;
   }
 }
