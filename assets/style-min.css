@@ -43,9 +43,7 @@ a {
 }
 .backdrop::after {
   left: 50%;
-  -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
-  -webkit-filter: FlipH;
   filter: FlipH;
   -ms-filter: "FlipH";
 }
@@ -350,6 +348,10 @@ h3 {
   text-align: center;
 }
 
+.list_people.no_twitter a:after{
+  display: none;
+}
+
 .guita {
   list-style: none;
   display: flex;
@@ -367,4 +369,72 @@ h3 {
 }
 .hide_until_twitter_is_working {
   display: none;
+}
+
+.header{
+  padding-top: 12rem;
+}
+
+.call_for_hack{
+  color: #22709c;
+  background: #f1ddbf;
+  padding: 0.5rem 0.5rem 0.1rem;
+position: fixed;
+  z-index: 20;
+  width: 100%;
+  text-align: center;
+}
+
+.call_for_hack::before{
+  left: 0;
+  width: 100%;
+  height: 196px;
+  background-image: url(/assets/arc.svg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 200% auto;
+  content: "";
+  position: absolute;
+  bottom: -196px;
+}
+
+.call_container{
+ border-bottom: #22709d2c 1px solid;
+ padding: 0 0 0.6rem 0;
+ margin-bottom: 0.4rem;
+}
+
+.call_for_hack h2{
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0;
+  display: inline;
+  font-variation-settings: "wght" 600;
+}
+
+.call_for_hack a{
+  background: #22709c;
+  padding: 0.3rem 1rem;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  border-radius: 4px;
+  text-decoration: none;
+  display: inline-block;
+  margin: 0 0.2rem;
+}
+.call_for_hack a:hover{
+  background: #124a6b;
+}
+
+.call_for_hack h3{
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin: 0;
+  display: inline;
+  font-variation-settings: "wght" 400;
+  display: block;
+}
+
+.call_for_hack h4{
+  font-size: 0.8rem;
 }
