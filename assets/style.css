@@ -2,6 +2,24 @@
   font-family: space;
   src: url(SpaceGrotesk-VariableFont_wght.ttf);
 }
+.mobile_only {
+  display: block;
+}
+@media (min-width: 800px) {
+  .mobile_only {
+    display: none;
+  }
+}
+
+.desktop_only {
+  display: none;
+}
+@media (min-width: 800px) {
+  .desktop_only {
+    display: block;
+  }
+}
+
 * {
   box-sizing: border-box;
   font-family: space, Ubuntu, "Helvetica Neue", Arial, sans-serif;
@@ -16,23 +34,19 @@ body {
 a {
   color: #F6EC10;
 }
+a:hover {
+  animation-name: blink;
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
+  animation-iteration-count: infinite;
+}
 
-@keyframes backdrop_enter {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+.backdrop {
+  margin: 0 auto;
+  max-width: 1000px;
+  width: 100%;
 }
-@keyframes backdrop_anime1 {
-  from {
-    background-size: cover;
-  }
-  to {
-    background-size: cover;
-  }
-}
+
 @keyframes blink {
   0% {
     opacity: 0.3;
@@ -47,12 +61,16 @@ a {
 .header {
   position: relative;
   text-align: center;
-  padding: 2rem;
+  padding: 2rem 0;
 }
 .header img {
   width: 100%;
-  padding-top: 2rem;
-  max-width: 1000px;
+  padding-top: 3rem;
+}
+@media (min-width: 800px) {
+  .header {
+    padding: 2rem;
+  }
 }
 
 .container {
@@ -69,7 +87,6 @@ a {
 }
 
 h1 {
-  text-transform: uppercase;
   word-spacing: normal;
   letter-spacing: 3px;
   font-variation-settings: "wght" 3000;
@@ -115,20 +132,38 @@ h3 {
     stroke-dashoffset: 0;
   }
 }
+.tix_container {
+  max-width: 500px;
+  text-align: center;
+  margin: 0 auto 1rem;
+  color: #F6EC10;
+}
+
 .half_content {
   display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+@media (min-width: 800px) {
+  .half_content {
+    flex-direction: row;
+  }
 }
 
 .neon_frame {
   padding: 3rem 3rem 0 3rem;
   margin: 2rem;
-  width: 50%;
   border-radius: 16px;
   position: relative;
   z-index: 20;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+}
+@media (min-width: 800px) {
+  .neon_frame {
+    width: 50%;
+  }
 }
 .neon_frame p {
   margin-bottom: 1rem;
@@ -153,6 +188,12 @@ h3 {
   font-size: 1.6rem;
   margin-bottom: 1rem;
 }
+.neon_frame h5 {
+  color: #9EEAFD;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
 .neon_frame figure {
   width: 100%;
   position: relative;
@@ -161,6 +202,35 @@ h3 {
 }
 .neon_frame figure img {
   width: 100%;
+}
+
+.social_links {
+  max-width: 1000px;
+  margin: 3rem auto 1rem;
+  text-align: center;
+}
+.social_links ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.social_links ul li {
+  margin: 1rem;
+}
+.social_links a {
+  margin: 1rem;
+  display: block;
+  border: 2px solid #F6EC10;
+  padding: 1rem;
+  box-shadow: 0 0 5px #F6EC10;
+  border-radius: 1000%;
+}
+.social_links a svg {
+  fill: #F6EC10;
+  width: 26px;
+  height: 26px;
 }
 
 .neon_frame::before {
@@ -191,6 +261,25 @@ h3 {
 
 .box_content {
   height: 100%;
+  width: 100%;
+  position: relative;
+  z-index: 20;
+}
+.box_content.divider {
+  padding: 0;
+  margin: 0 0 4rem;
+}
+.box_content.divider::after {
+  content: "";
+  width: 100%;
+  display: block;
+  height: 1px;
+  position: absolute;
+  background-color: #9EEAFD;
+  box-shadow: 0 0 5px #9EEAFD;
+  left: 0;
+  bottom: 0;
+  z-index: 3;
 }
 
 .button_neon {
@@ -207,13 +296,6 @@ h3 {
   font-size: 1.4rem;
   font-weight: bold;
 }
-.button_neon:hover {
-  animation-name: blink;
-  animation-duration: 1s;
-  animation-fill-mode: backwards;
-  animation-iteration-count: infinite;
-}
-
 .button_neon:before {
   content: "";
   width: 100%;
@@ -227,8 +309,96 @@ h3 {
   border: #F6EC10 2px solid;
   border-radius: 8px;
 }
-
 .button_neon:after {
+  content: "";
+  width: 100px;
+  display: block;
+  height: 12px;
+  position: absolute;
+  background-color: #020E38;
+  right: -20px;
+  bottom: -9px;
+  z-index: 3;
+}
+
+.button_neon.sec {
+  text-align: center;
+  padding: 0.7rem 1.5rem;
+  margin: 2rem 0;
+  display: inline-block;
+  text-decoration: none;
+  position: relative;
+  z-index: 20;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+  border-color: #F6EC10;
+  box-shadow: 0 0 5px #F6EC10, inset 0 0 5px #F6EC10;
+  text-shadow: 0 0 5px #F6EC10;
+  color: #F6EC10;
+  font-size: 1rem;
+}
+.button_neon.sec svg {
+  width: 18px;
+  fill: #F6EC10;
+  padding-top: 5px;
+  margin-right: 10px;
+}
+.button_neon.sec:before {
+  content: "";
+  width: 100%;
+  display: block;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  box-shadow: 0 0 5px #F6EC10, inset 0 0 5px #F6EC10;
+  border: #F6EC10 2px solid;
+  border-radius: 8px;
+}
+.button_neon.sec:after {
+  content: "";
+  width: 130px;
+  display: block;
+  height: 15px;
+  position: absolute;
+  background-color: #020E38;
+  right: -20px;
+  bottom: -10px;
+  z-index: 3;
+}
+
+.button_neon.disable {
+  text-align: center;
+  padding: 1rem 2rem;
+  margin: 2rem 0;
+  display: inline-block;
+  text-decoration: none;
+  position: relative;
+  z-index: 20;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  opacity: 1;
+  color: rgb(74, 74, 74);
+  text-shadow: 0 0 0 rgb(74, 74, 74);
+}
+.button_neon.disable:before {
+  content: "";
+  width: 100%;
+  display: block;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  box-shadow: 0 0 0 #F6EC10, inset 0 0 0 #F6EC10;
+  border: rgb(74, 74, 74) 2px solid;
+  border-radius: 8px;
+}
+.button_neon.disable:after {
   content: "";
   width: 100px;
   display: block;
@@ -282,26 +452,6 @@ h3 {
   margin-top: 3rem;
 }
 
-.afterline a {
-  text-decoration: none;
-  border: 1px solid #f1ddbf;
-  padding: 0.6rem 2rem;
-  border-radius: 4px;
-  line-height: 1.5rem;
-  text-align: center;
-}
-
-.afterline a img {
-  margin-right: 0.5rem;
-  padding-top: 0.2rem;
-  height: 1.1rem;
-}
-
-.afterline a:hover,
-.afterline a:active {
-  background-color: #1e1e44;
-}
-
 .full_container {
   position: relative;
   z-index: 2;
@@ -310,54 +460,9 @@ h3 {
   max-width: 1200px;
 }
 
-.from_right,
-.from_left {
-  width: 100%;
-  margin: 4rem 0;
-}
-
-.from_right span,
-.from_left span {
-  background-color: #F6EC10;
-  display: block;
-  height: 1px;
-  width: 100%;
-  margin: 0.6rem 0;
-}
-
-.from_right h4,
-.from_left h4 {
-  font-size: 1.5rem;
-  letter-spacing: 2px;
-  width: 100%;
-}
-
-.from_right p,
-.from_left p {
-  max-width: 400px;
-  width: 100%;
-  margin: 0;
-}
-
-.from_left {
-  padding-right: 30%;
-  text-align: right;
-}
-
-.from_right {
-  padding-left: 30%;
-  display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  flex-direction: row;
-  align-content: center;
-  align-items: flex-start;
-}
-
 .list_people {
   list-style: none;
   display: flex;
-  justify-content: flex-end;
   flex-wrap: wrap;
   flex-direction: row;
   align-content: center;
@@ -421,75 +526,47 @@ h3 {
   display: none;
 }
 
-.guita {
+.support img {
+  width: 130px;
+}
+
+.sponsors {
+  margin-bottom: 2rem !important;
+  padding-bottom: 2rem;
+}
+.sponsors img {
+  width: 110px;
+}
+
+.faq {
+  padding: 2rem;
+}
+@media (min-width: 800px) {
+  .faq {
+    padding: 4rem;
+  }
+}
+.faq h3 {
+  font-weight: bold;
+  color: #F6EC10;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.faq h6 {
+  font-weight: bold;
+  color: #00E5F4;
+  font-size: 1.1rem;
+}
+.faq ul {
+  margin: 1rem 0;
+  padding: 0;
   list-style: none;
-  display: flex;
-  margin: 0;
+}
+.faq ul li {
+  margin-bottom: 2rem;
 }
 
-.guita li {
-  padding: 0.5rem;
-  margin: 0;
-}
-
-.guita li a {
-  display: block;
-}
-
-.guita li a:hover {
-  opacity: 0.9;
-}
-
-.hide_until_twitter_is_working {
-  display: none;
-}
-
-.call_for_hack {
-  color: #9EEAFD;
-  padding: 0.5rem 0.5rem 0.1rem;
-  z-index: 20;
-  width: 100%;
+footer {
   text-align: center;
-}
-
-.call_container {
-  border-bottom: rgba(34, 112, 157, 0.1725490196) 1px solid;
-  padding: 0 0 0.6rem 0;
-  margin-bottom: 0.4rem;
-}
-
-.call_for_hack h2 {
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin: 1rem;
-  font-variation-settings: "wght" 600;
-}
-
-.call_for_hack a {
-  background: #F6EC10;
-  color: #020E38;
-  padding: 0.3rem 1rem;
-  font-size: 1.6rem;
-  text-transform: uppercase;
-  border-radius: 4px;
-  text-decoration: none;
-  display: inline-block;
-  margin: 0 0.2rem;
-}
-
-.call_for_hack a:hover {
-  background: #124a6b;
-}
-
-.call_for_hack h3 {
-  font-size: 0.9rem;
-  font-weight: bold;
-  margin: 0;
-  display: inline;
-  font-variation-settings: "wght" 400;
-  display: block;
-}
-
-.call_for_hack h4 {
-  font-size: 0.8rem;
+  margin-bottom: 2rem;
 }

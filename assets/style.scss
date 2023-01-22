@@ -8,6 +8,45 @@ $baby-blue: #00E5F4;
 $light-blue: #9EEAFD;
 $yeallow: #F6EC10;
 $white:#fff;
+$grey:rgb(74, 74, 74);
+
+
+
+@mixin phone {
+  @media (max-width: 600px) { @content; }
+}
+@mixin big-phone {
+  @media (min-width: 601px) { @content; }
+}
+@mixin tablet {
+  @media (min-width: 800px) { @content; }
+}
+@mixin desktop {
+  @media (min-width: 1200px) { @content; }
+}
+@mixin big-desktop {
+  @media (min-width: 1800px) { @content; }
+}
+
+
+// @include tablet {    
+//   font-size: 1rem; 
+// }
+
+.mobile_only{
+  display: block;
+  @include tablet {    
+    display: none;
+  }
+}
+
+.desktop_only{
+  display: none;
+  @include tablet {    
+    display: block;
+  }
+}
+
 
 * {
   box-sizing: border-box;
@@ -22,27 +61,20 @@ body {
 
 a {
   color: $yeallow;
+  &:hover{
+    animation-name: blink;
+    animation-duration: 1s;
+    animation-fill-mode: backwards;
+    animation-iteration-count: infinite;
+   }
 }
 
+.backdrop{
+  margin: 0 auto;
+  max-width: 1000px;
+  width: 100%;
 
-@keyframes backdrop_enter {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
-
-@keyframes backdrop_anime1 {
-  from {
-    background-size: cover;
-  }
-  to {
-    background-size: cover;
-  }
-}
-
 
 @keyframes blink {
   0% {
@@ -62,12 +94,15 @@ a {
 .header{
   position: relative;
   text-align: center;
-  padding: 2rem;
+  padding: 2rem 0;
+
   img{
    width: 100%;
-   padding-top: 2rem;
-   max-width: 1000px;
+   padding-top: 3rem;
   }
+  @include tablet {    
+    padding: 2rem;
+   }
 }
 
 .container {
@@ -83,7 +118,7 @@ a {
 }
 
 h1 {
-  text-transform: uppercase;
+
   word-spacing: normal;
   letter-spacing: 3px;
   font-variation-settings: "wght" 3000;
@@ -136,19 +171,29 @@ h3 {
     stroke-dashoffset: 0;
   }
 }
-.inner_container {
 
+
+.tix_container{
+  max-width: 500px;
+  text-align: center;
+  margin: 0 auto 1rem;
+  color: $yeallow;
 }
 
 
 .half_content{
   display: flex;
+  flex-direction: column;
+  width: 100%;
+    @include tablet {    
+      flex-direction: row;
+  }
 }
 
 .neon_frame{
   padding: 3rem 3rem 0 3rem;
   margin: 2rem;
-  width: 50%;
+
   border-radius: 16px;
    position: relative;
    z-index: 20;
@@ -156,11 +201,10 @@ h3 {
    flex-direction: column;
    justify-content: flex-start;
 
-  
-  // background-image: url(/assets/svg/box_neon.svg);
-  // background-position: top left;
-  // background-size: 100% 100%;
-  // background-repeat: no-repeat;
+   @include tablet {    
+   width: 50%;
+  }
+ 
 
   p{
     margin-bottom: 1rem;
@@ -187,6 +231,13 @@ h3 {
     font-size: 1.6rem;
     margin-bottom: 1rem;
   }
+  h5{
+    color: $light-blue;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+  }
+
 
   figure{
     width: 100%;
@@ -198,6 +249,38 @@ h3 {
     }
   }
 
+}
+
+.social_links{
+  
+  max-width: 1000px;
+  margin: 3rem auto 1rem;
+  text-align: center;
+
+  ul{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    li{
+      margin: 1rem;
+    }
+  }
+
+  a{
+    margin: 1rem;
+    display: block;
+    border: 2px solid $yeallow;
+    padding: 1rem;
+    box-shadow: 0 0 5px $yeallow;
+    border-radius: 1000%;
+    svg{
+      fill: $yeallow;
+      width: 26px;
+      height: 26px;
+    }
+  }
 }
 
 .neon_frame::before{
@@ -228,6 +311,27 @@ h3 {
 
 .box_content{
   height: 100%;
+  width: 100%;
+  position: relative;
+  z-index: 20;
+  &.divider{
+
+    padding: 0;
+    margin: 0 0 4rem;
+  }
+  &.divider::after{
+    content: "";
+    width: 100%;
+    display: block;
+    height: 1px;
+    position: absolute;
+    background-color: $light-blue;
+    box-shadow: 0 0 5px $light-blue;
+    left: 0;
+    bottom: 0;
+    z-index: 3;
+  }
+
 }
 
 .button_neon{
@@ -243,39 +347,141 @@ h3 {
    letter-spacing: 2px;
    font-size: 1.4rem;
    font-weight: bold;
-   &:hover{
-    animation-name: blink;
-    animation-duration: 1s;
-    animation-fill-mode: backwards;
-    animation-iteration-count: infinite;
-   }
+
+   &:before{
+    content: "";
+    width: 100%;
+    display: block;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    box-shadow: 0 0 5px $yeallow , inset 0 0 5px $yeallow ;
+    border: #F6EC10 2px solid;
+    border-radius: 8px;
+  
+   
+  }
+  
+   &:after{
+    content: "";
+    width: 100px;
+    display: block;
+    height: 12px;
+    position: absolute;
+    background-color: $dark-blue;
+    right: -20px;
+    bottom: -9px;
+    z-index: 3;
+  }
+
 }
 
-.button_neon:before{
-  content: "";
-  width: 100%;
-  display: block;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 2;
-  box-shadow: 0 0 5px $yeallow , inset 0 0 5px $yeallow ;
-  border: #F6EC10 2px solid;
-  border-radius: 8px;
+
+
+.button_neon.sec{
+  text-align: center;
+  padding: 0.7rem 1.5rem;
+  margin: 2rem 0;
+  display: inline-block;
+  text-decoration: none;
+  position: relative;
+   z-index: 20;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+   font-weight: bold;
+   border-color: $yeallow;
+    box-shadow: 0 0 5px $yeallow , inset 0 0 5px $yeallow ;
+    text-shadow: 0 0 5px $yeallow;
+    color: $yeallow;
+    font-size: 1rem;
+
+    svg{
+      width: 18px;
+      fill: $yeallow;
+      padding-top: 5px;
+      margin-right: 10px;
+    }
+
+   &:before{
+    content: "";
+    width: 100%;
+    display: block;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    box-shadow: 0 0 5px $yeallow , inset 0 0 5px $yeallow ;
+    border: $yeallow 2px solid;
+    border-radius: 8px;
+  
+   
+  }
+  
+   &:after{
+    content: "";
+    width: 130px;
+    display: block;
+    height: 15px;
+    position: absolute;
+    background-color: $dark-blue;
+    right: -20px;
+    bottom: -10px;
+    z-index: 3;
+  }
+
+
 }
 
- .button_neon:after{
-  content: "";
-  width: 100px;
-  display: block;
-  height: 12px;
-  position: absolute;
-  background-color: $dark-blue;
-  right: -20px;
-  bottom: -9px;
-  z-index: 3;
+.button_neon.disable{
+  text-align: center;
+  padding: 1rem 2rem;
+  margin: 2rem 0;
+  display: inline-block;
+  text-decoration: none;
+  position: relative;
+   z-index: 20;
+   text-transform: uppercase;
+   letter-spacing: 2px;
+   font-size: 1.4rem;
+   font-weight: bold;
+   opacity: 1;
+   color: $grey;
+   text-shadow: 0 0 0 $grey;
+   
+
+   &:before{
+    content: "";
+    width: 100%;
+    display: block;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    box-shadow: 0 0 0 $yeallow , inset 0 0 0 $yeallow ;
+    border: $grey 2px solid;
+    border-radius: 8px;
+  
+   
+  }
+  
+   &:after{
+    content: "";
+    width: 100px;
+    display: block;
+    height: 12px;
+    position: absolute;
+    background-color: $dark-blue;
+    right: -20px;
+    bottom: -9px;
+    z-index: 3;
+  }
+
 }
+
 
 
 
@@ -323,23 +529,9 @@ h3 {
   display: flex;
   margin-top: 3rem;
 }
-.afterline a {
-  text-decoration: none;
-  border: 1px solid #f1ddbf;
-  padding: 0.6rem 2rem;
-  border-radius: 4px;
-  line-height: 1.5rem;
-  text-align: center;
-}
-.afterline a img {
-  margin-right: 0.5rem;
-  padding-top: 0.2rem;
-  height: 1.1rem;
-}
-.afterline a:hover,
-.afterline a:active {
-  background-color: #1e1e44;
-}
+
+
+
 
 .full_container {
   position: relative;
@@ -349,51 +541,11 @@ h3 {
   max-width: 1200px;
 }
 
-.from_right,
-.from_left {
-  width: 100%;
-  margin: 4rem 0;
-}
-.from_right span,
-.from_left span {
-  background-color: $yeallow;
-  display: block;
-  height: 1px;
-  width: 100%;
-  margin: 0.6rem 0;
-}
-.from_right h4,
-.from_left h4 {
-  font-size: 1.5rem;
-  letter-spacing: 2px;
-  width: 100%;
-}
-.from_right p,
-.from_left p {
-  max-width: 400px;
-  width: 100%;
-  margin: 0;
-}
 
-.from_left {
-  padding-right: 30%;
-  text-align: right;
-}
-
-.from_right {
-  padding-left: 30%;
-  display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  flex-direction: row;
-  align-content: center;
-  align-items: flex-start;
-}
 
 .list_people {
   list-style: none;
   display: flex;
-  justify-content: flex-end;
   flex-wrap: wrap;
   flex-direction: row;
   align-content: center;
@@ -449,76 +601,50 @@ h3 {
   display: none;
 }
 
-.guita {
-  list-style: none;
-  display: flex;
-  margin: 0;
+.support{
+  img{
+    width: 130px;
+  }
 }
-.guita li {
-  padding: 0.5rem;
-  margin: 0;
-}
-.guita li a {
-  display: block;
-}
-.guita li a:hover {
-  opacity: 0.9;
-}
-.hide_until_twitter_is_working {
-  display: none;
+
+.sponsors{
+  margin-bottom: 2rem !important;
+  padding-bottom: 2rem;
+  img{
+    width: 110px;
+  }
 }
 
 
+.faq{
+  padding: 2rem;
+  @include tablet {    
+    padding: 4rem;
+   }
+  h3{
+    font-weight: bold;
+    color: $yeallow;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  h6{
+    font-weight: bold;
+    color: $baby-blue;
+    font-size: 1.1rem;
+  }
+  ul{
+    margin: 1rem 0;
+    padding: 0;
+    list-style: none;
+    li{
+      margin-bottom: 2rem;
+    }
+  }
+}
 
-.call_for_hack{
-  color: $light-blue;
 
-  padding: 0.5rem 0.5rem 0.1rem;
-
-  z-index: 20;
-  width: 100%;
+footer{
   text-align: center;
-}
+  margin-bottom: 2rem;
 
-
-
-.call_container{
- border-bottom: #22709d2c 1px solid;
- padding: 0 0 0.6rem 0;
- margin-bottom: 0.4rem;
-}
-
-.call_for_hack h2{
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin: 1rem;
-  font-variation-settings: "wght" 600;
-}
-
-.call_for_hack a{
-  background: $yeallow;
-  color: $dark-blue;
-  padding: 0.3rem 1rem;
-  font-size: 1.6rem;
-  text-transform: uppercase;
-  border-radius: 4px;
-  text-decoration: none;
-  display: inline-block;
-  margin: 0 0.2rem;
-}
-.call_for_hack a:hover{
-  background: #124a6b;
-}
-
-.call_for_hack h3{
-  font-size: 0.9rem;
-  font-weight: bold;
-  margin: 0;
-  display: inline;
-  font-variation-settings: "wght" 400;
-  display: block;
-}
-
-.call_for_hack h4{
-  font-size: 0.8rem;
 }
