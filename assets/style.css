@@ -27,14 +27,14 @@
 }
 
 body {
-  background: #020E38;
+  background: #020e38;
   color: #fff;
 }
 
 a {
-  color: #F6EC10;
+  color: #f6ec10;
 }
-a:hover {
+a:hover:not(.disable) {
   animation-name: blink;
   animation-duration: 1s;
   animation-fill-mode: backwards;
@@ -136,7 +136,7 @@ h3 {
   max-width: 500px;
   text-align: center;
   margin: 0 auto 1rem;
-  color: #F6EC10;
+  color: #f6ec10;
 }
 
 .half_content {
@@ -179,17 +179,17 @@ h3 {
   margin-bottom: 10px;
 }
 .neon_frame h3 {
-  color: #F6EC10;
+  color: #f6ec10;
   font-size: 2rem;
   margin-bottom: 3rem;
 }
 .neon_frame h4 {
-  color: #9EEAFD;
+  color: #9eeafd;
   font-size: 1.6rem;
   margin-bottom: 1rem;
 }
 .neon_frame h5 {
-  color: #9EEAFD;
+  color: #9eeafd;
   font-size: 1.2rem;
   margin-bottom: 1rem;
   margin-top: 2rem;
@@ -222,13 +222,13 @@ h3 {
 .social_links a {
   margin: 1rem;
   display: block;
-  border: 2px solid #F6EC10;
+  border: 2px solid #f6ec10;
   padding: 1rem;
-  box-shadow: 0 0 5px #F6EC10;
+  box-shadow: 0 0 5px #f6ec10;
   border-radius: 1000%;
 }
 .social_links a svg {
-  fill: #F6EC10;
+  fill: #f6ec10;
   width: 26px;
   height: 26px;
 }
@@ -242,8 +242,8 @@ h3 {
   left: 0;
   top: 0;
   z-index: 2;
-  box-shadow: 0 0 10px #9EEAFD, inset 0 0 10px #9EEAFD;
-  border: #9EEAFD 2px solid;
+  box-shadow: 0 0 10px #9eeafd, inset 0 0 10px #9eeafd;
+  border: #9eeafd 2px solid;
   border-radius: 16px;
 }
 
@@ -253,7 +253,7 @@ h3 {
   display: block;
   height: 30px;
   position: absolute;
-  background-color: #020E38;
+  background-color: #020e38;
   right: -20px;
   top: -15px;
   z-index: 3;
@@ -275,8 +275,8 @@ h3 {
   display: block;
   height: 1px;
   position: absolute;
-  background-color: #9EEAFD;
-  box-shadow: 0 0 5px #9EEAFD;
+  background-color: #9eeafd;
+  box-shadow: 0 0 5px #9eeafd;
   left: 0;
   bottom: 0;
   z-index: 3;
@@ -291,7 +291,7 @@ h3 {
   position: relative;
   z-index: 20;
   text-transform: uppercase;
-  text-shadow: 0 0 5px #F6EC10;
+  text-shadow: 0 0 5px #f6ec10;
   letter-spacing: 2px;
   font-size: 1.4rem;
   font-weight: bold;
@@ -305,8 +305,8 @@ h3 {
   left: 0;
   top: 0;
   z-index: 2;
-  box-shadow: 0 0 5px #F6EC10, inset 0 0 5px #F6EC10;
-  border: #F6EC10 2px solid;
+  box-shadow: 0 0 5px #f6ec10, inset 0 0 5px #f6ec10;
+  border: #f6ec10 2px solid;
   border-radius: 8px;
 }
 .button_neon:after {
@@ -315,7 +315,7 @@ h3 {
   display: block;
   height: 12px;
   position: absolute;
-  background-color: #020E38;
+  background-color: #020e38;
   right: -20px;
   bottom: -9px;
   z-index: 3;
@@ -332,15 +332,15 @@ h3 {
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: bold;
-  border-color: #F6EC10;
-  box-shadow: 0 0 5px #F6EC10, inset 0 0 5px #F6EC10;
-  text-shadow: 0 0 5px #F6EC10;
-  color: #F6EC10;
+  border-color: #f6ec10;
+  box-shadow: 0 0 5px #f6ec10, inset 0 0 5px #f6ec10;
+  text-shadow: 0 0 5px #f6ec10;
+  color: #f6ec10;
   font-size: 1rem;
 }
 .button_neon.sec svg {
   width: 18px;
-  fill: #F6EC10;
+  fill: #f6ec10;
   padding-top: 5px;
   margin-right: 10px;
 }
@@ -353,8 +353,8 @@ h3 {
   left: 0;
   top: 0;
   z-index: 2;
-  box-shadow: 0 0 5px #F6EC10, inset 0 0 5px #F6EC10;
-  border: #F6EC10 2px solid;
+  box-shadow: 0 0 5px #f6ec10, inset 0 0 5px #f6ec10;
+  border: #f6ec10 2px solid;
   border-radius: 8px;
 }
 .button_neon.sec:after {
@@ -363,7 +363,7 @@ h3 {
   display: block;
   height: 15px;
   position: absolute;
-  background-color: #020E38;
+  background-color: #020e38;
   right: -20px;
   bottom: -10px;
   z-index: 3;
@@ -394,7 +394,7 @@ h3 {
   left: 0;
   top: 0;
   z-index: 2;
-  box-shadow: 0 0 0 #F6EC10, inset 0 0 0 #F6EC10;
+  box-shadow: 0 0 0 #f6ec10, inset 0 0 0 #f6ec10;
   border: rgb(74, 74, 74) 2px solid;
   border-radius: 8px;
 }
@@ -404,7 +404,7 @@ h3 {
   display: block;
   height: 12px;
   position: absolute;
-  background-color: #020E38;
+  background-color: #020e38;
   right: -20px;
   bottom: -9px;
   z-index: 3;
@@ -548,13 +548,13 @@ h3 {
 }
 .faq h3 {
   font-weight: bold;
-  color: #F6EC10;
+  color: #f6ec10;
   font-size: 2rem;
   margin-bottom: 1rem;
 }
 .faq h6 {
   font-weight: bold;
-  color: #00E5F4;
+  color: #00e5f4;
   font-size: 1.1rem;
 }
 .faq ul {
