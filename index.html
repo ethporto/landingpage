@@ -9,6 +9,7 @@
     />
     <title>ETHPorto</title>
     <link href="assets/style.css" rel="stylesheet" />
+    <link href="assets/navbar.css" rel="stylesheet" />
 
     <meta property="og:image" content="cover.png" />
     <meta property="og:image:type" content="image/png" />
@@ -18,6 +19,12 @@
       property="og:image:alt"
       content="March 16 to 18, 2023. Bringing the first ETH event to the beautiful city of Porto"
     />
+    <script>
+      function scrollToMeetTheTeam() {
+        var element = document.getElementById("meet-the-team");
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    </script>
 
     <script type="application/ld+json">
       {
@@ -49,6 +56,23 @@
   </head>
 
   <body>
+    <div class="nav">
+      <input type="checkbox" id="nav-check" />
+      <div class="nav-header">
+        <div class="nav-title">ETHPorto</div>
+      </div>
+      <div class="nav-btn">
+        <label for="nav-check">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+
+      <div class="nav-links">
+        <a onclick="scrollToMeetTheTeam()">About us</a>
+      </div>
+    </div>
     <div class="backdrop">
       <div class="header">
         <h1>ETH<span>Porto</span></h1>
@@ -223,7 +247,7 @@
       <section class="half_content">
         <div class="neon_frame">
           <div class="box_content">
-            <h3>Meet the team</h3>
+            <h3 id="meet-the-team">Meet the team</h3>
             <p>
               We are an informal and passionate group of local folks that wants
               to help grow the local Ethereum ecosystem.
