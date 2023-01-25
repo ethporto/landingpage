@@ -538,15 +538,45 @@ h3 {
   display: none;
 }
 
-.support img {
+.support li {
+  width: auto;
+  display: inline-block;
+  margin: 0.3rem;
+  padding-bottom: 0.5rem;
+}
+.support li a {
+  display: block;
+  padding: 0.2rem;
+}
+.support img.tear1 {
+  width: 180px;
+}
+.support img.tear2 {
   width: 130px;
+}
+.support img.tear3 {
+  width: 90px;
 }
 
 .sponsors {
   margin-bottom: 2rem !important;
   padding-bottom: 2rem;
 }
-.sponsors img {
+.sponsors li {
+  width: auto;
+  display: inline-block;
+  margin: 0.3rem;
+}
+.sponsors li a {
+  display: block;
+}
+.sponsors img.tear1 {
+  width: 180px;
+}
+.sponsors img.tear2 {
+  width: 130px;
+}
+.sponsors img.tear3 {
   width: 110px;
 }
 
