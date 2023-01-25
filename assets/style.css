@@ -65,6 +65,11 @@ a:hover {
     opacity: 0.3;
   }
 }
+.small_text {
+  font-size: 0.8rem;
+  color: #fff;
+}
+
 .header {
   position: relative;
   text-align: center;
