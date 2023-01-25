@@ -41,6 +41,13 @@ a:hover {
   animation-iteration-count: infinite;
 }
 
+.blink {
+  animation-name: blink;
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
+  animation-iteration-count: infinite;
+}
+
 .backdrop {
   margin: 0 auto;
   max-width: 1000px;
@@ -58,6 +65,11 @@ a:hover {
     opacity: 0.3;
   }
 }
+.small_text {
+  font-size: 0.8rem;
+  color: #fff;
+}
+
 .header {
   position: relative;
   text-align: center;

@@ -69,6 +69,13 @@ a {
    }
 }
 
+.blink{
+  animation-name: blink;
+    animation-duration: 1s;
+    animation-fill-mode: backwards;
+    animation-iteration-count: infinite;
+}
+
 .backdrop{
   margin: 0 auto;
   max-width: 1000px;
@@ -88,7 +95,10 @@ a {
   }
 }
 
-
+.small_text{
+  font-size: 0.8rem;
+  color: $white;
+}
 
 
 .header{
