@@ -150,6 +150,12 @@ h3 {
   margin: 0 auto 1rem;
   color: #F6EC10;
 }
+.tix_container h4 {
+  font-size: 1.3rem;
+}
+.tix_container h4.strike {
+  font-size: 1rem;
+}
 
 .half_content {
   display: flex;
@@ -214,6 +220,24 @@ h3 {
 }
 .neon_frame figure img {
   width: 100%;
+}
+
+.strike {
+  text-decoration: line-through;
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+.soldout {
+  background-color: #00E5F4;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  width: 100px;
+  color: #020E38;
+  text-transform: uppercase;
+  opacity: 0.9;
+  position: relative;
+  transform: rotate(-5deg);
 }
 
 .social_links {
@@ -538,15 +562,45 @@ h3 {
   display: none;
 }
 
-.support img {
+.support li {
+  width: auto;
+  display: inline-block;
+  margin: 0.3rem;
+  padding-bottom: 0.5rem;
+}
+.support li a {
+  display: block;
+  padding: 0.2rem;
+}
+.support img.tear1 {
+  width: 180px;
+}
+.support img.tear2 {
   width: 130px;
+}
+.support img.tear3 {
+  width: 90px;
 }
 
 .sponsors {
   margin-bottom: 2rem !important;
   padding-bottom: 2rem;
 }
-.sponsors img {
+.sponsors li {
+  width: auto;
+  display: inline-block;
+  margin: 0.3rem;
+}
+.sponsors li a {
+  display: block;
+}
+.sponsors img.tear1 {
+  width: 180px;
+}
+.sponsors img.tear2 {
+  width: 130px;
+}
+.sponsors img.tear3 {
   width: 110px;
 }
 
@@ -581,4 +635,14 @@ h3 {
 footer {
   text-align: center;
   margin-bottom: 2rem;
+}
+
+.media_footer {
+  margin-bottom: 5rem;
+}
+.media_footer h3 {
+  color: #F6EC10;
+}
+.media_footer p {
+  font-size: 0.8rem;
 }
