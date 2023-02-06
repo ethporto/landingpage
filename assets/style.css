@@ -646,3 +646,48 @@ footer {
 .media_footer p {
   font-size: 0.8rem;
 }
+
+.side_events {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 50;
+}
+.side_events a {
+  display: block;
+  text-decoration: none;
+  background-color: #9EEAFD;
+  display: flex;
+  padding: 6px;
+  width: 100%;
+}
+@media (max-width: 600px) {
+  .side_events a {
+    display: block;
+  }
+}
+.side_events a:hover {
+  animation-name: none;
+  background-color: #F6EC10;
+}
+.side_events a div {
+  position: relative;
+  right: 8px;
+  display: flex;
+  width: 165px;
+}
+@media (min-width: 800px) {
+  .side_events a div {
+    position: absolute;
+  }
+}
+.side_events p {
+  color: #020E38;
+  line-height: 20px;
+}
+.side_events img {
+  width: 40px;
+  margin: 0 8px;
+}

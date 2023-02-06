@@ -726,3 +726,48 @@ footer{
     font-size: 0.8rem;
   }
 }
+
+
+.side_events{
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 50;
+  
+   
+  a{
+    display: block;
+    text-decoration: none;
+    background-color: #9EEAFD;
+    display: flex;
+    padding: 6px ;
+    width: 100%;
+    @include phone {    
+      display: block;
+     }
+    &:hover{
+      animation-name: none;
+      background-color: $yeallow;
+    }
+    div{
+      position: relative;
+      right: 8px;
+      display: flex;
+      width: 165px;
+       @include tablet {    
+        position: absolute;
+       }
+    }
+  }
+  p{
+    color: $dark-blue;
+    line-height: 20px;
+  }
+  img{
+    width: 40px;
+    margin: 0 8px;
+
+  }
+}
