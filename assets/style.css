@@ -660,7 +660,7 @@ footer {
   text-decoration: none;
   background-color: #9EEAFD;
   display: flex;
-  padding: 6px;
+  padding: 8px;
   width: 100%;
 }
 @media (max-width: 600px) {
@@ -688,6 +688,6 @@ footer {
   line-height: 20px;
 }
 .side_events img {
-  width: 40px;
+  width: 45px;
   margin: 0 8px;
 }
