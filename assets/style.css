@@ -701,8 +701,8 @@ footer {
 }
 @media (max-width: 600px) {
   .speakers.list_people a::after {
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
   }
 }
 .speakers.list_people li {
@@ -733,7 +733,7 @@ footer {
 }
 @media (max-width: 600px) {
   .speakers.list_people figure {
-    width: 100px;
+    width: 90px;
   }
 }
 .speakers.list_people figure img {
@@ -741,7 +741,7 @@ footer {
 }
 @media (max-width: 600px) {
   .speakers.list_people figure img {
-    width: 100px;
+    width: 90px;
   }
 }
 .speakers.list_people p {
@@ -759,7 +759,7 @@ footer {
   flex-direction: column;
 }
 .half_content.not_that_half .neon_frame {
-  width: 100%;
+  width: auto;
   display: flex;
   flex-direction: row;
   align-items: flex-end;

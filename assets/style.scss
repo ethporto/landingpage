@@ -774,7 +774,7 @@ footer{
 }
 
 $speaker_w: 120px;
-$speaker_wm: 100px;
+$speaker_wm: 90px;
 
 .speakers.list_people {
   justify-content: space-around;
@@ -836,7 +836,7 @@ $speaker_wm: 100px;
 .half_content.not_that_half{
     flex-direction: column;
     .neon_frame{
-      width: 100%;
+      width: auto;
       display: flex;
       flex-direction: row;
       align-items: flex-end;
