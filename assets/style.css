@@ -118,7 +118,7 @@ h2 {
 h3 {
   letter-spacing: 3px;
   font-variation-settings: "wght" 600;
-  line-height: 1.2rem;
+  line-height: 1.9rem;
   font-size: 1rem;
   margin-bottom: 0.5rem;
 }
@@ -690,4 +690,82 @@ footer {
 .side_events img {
   width: 45px;
   margin: 0 8px;
+}
+
+.speakers.list_people {
+  justify-content: space-around;
+}
+.speakers.list_people a::after {
+  width: 120px;
+  height: 120px;
+}
+@media (max-width: 600px) {
+  .speakers.list_people a::after {
+    width: 100px;
+    height: 100px;
+  }
+}
+.speakers.list_people li {
+  padding: 0.7rem;
+  width: 33%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 800px) {
+  .speakers.list_people li {
+    width: 25%;
+  }
+}
+@media (min-width: 1200px) {
+  .speakers.list_people li {
+    width: 20%;
+  }
+}
+@media (max-width: 600px) {
+  .speakers.list_people li {
+    width: 50%;
+  }
+}
+.speakers.list_people figure {
+  width: 120px;
+  padding-bottom: 0.5rem;
+}
+@media (max-width: 600px) {
+  .speakers.list_people figure {
+    width: 100px;
+  }
+}
+.speakers.list_people figure img {
+  width: 120px;
+}
+@media (max-width: 600px) {
+  .speakers.list_people figure img {
+    width: 100px;
+  }
+}
+.speakers.list_people p {
+  font-size: 1rem;
+  margin-bottom: 0;
+  padding: 0;
+}
+.speakers.list_people p.small_text {
+  font-size: 0.7rem;
+  line-height: 1rem;
+  opacity: 0.7;
+}
+
+.half_content.not_that_half {
+  flex-direction: column;
+}
+.half_content.not_that_half .neon_frame {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.half_content.not_that_half .neon_frame .box_content, .half_content.not_that_half .neon_frame figure {
+  width: 50%;
+}
+.half_content.not_that_half .neon_frame .box_content.full {
+  width: 100%;
 }
