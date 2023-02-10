@@ -839,8 +839,18 @@ $speaker_wm: 100px;
       width: 100%;
       display: flex;
       flex-direction: row;
+      align-items: flex-end;
+      @include phone {    
+        flex-direction: column;
+       }
 
-      .box_content, figure{ width: 50%;}
+      .box_content, figure{ 
+        width: 50%;
+        @include phone {    
+          width: 100%;
+         }
+      }
+
       .box_content.full{
         width: 100%;
       }

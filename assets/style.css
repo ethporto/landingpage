@@ -762,9 +762,20 @@ footer {
   width: 100%;
   display: flex;
   flex-direction: row;
+  align-items: flex-end;
+}
+@media (max-width: 600px) {
+  .half_content.not_that_half .neon_frame {
+    flex-direction: column;
+  }
 }
 .half_content.not_that_half .neon_frame .box_content, .half_content.not_that_half .neon_frame figure {
   width: 50%;
+}
+@media (max-width: 600px) {
+  .half_content.not_that_half .neon_frame .box_content, .half_content.not_that_half .neon_frame figure {
+    width: 100%;
+  }
 }
 .half_content.not_that_half .neon_frame .box_content.full {
   width: 100%;
