@@ -153,7 +153,7 @@ h2 {
 h3 {
   letter-spacing: 3px;
   font-variation-settings: "wght" 600;
-  line-height: 1.2rem;
+  line-height: 1.9rem;
   font-size: 1rem;
   margin-bottom: 0.5rem;
 }
@@ -772,3 +772,90 @@ footer{
 
   }
 }
+
+$speaker_w: 120px;
+$speaker_wm: 90px;
+
+.speakers.list_people {
+  justify-content: space-around;
+  a::after{
+    width: $speaker_w;
+    height: $speaker_w;
+    @include phone {    
+      width: $speaker_wm;
+      height: $speaker_wm;
+     }
+  }
+
+
+
+  li{
+    padding: 0.7rem;
+    width: 33%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    
+    @include tablet {    
+      width: 25%;
+     }
+     @include desktop {    
+      width: 20%;
+     }
+    @include phone {    
+      width: 50%;
+     }
+
+  }
+
+
+  figure{
+    width: $speaker_w;
+    @include phone {  width: $speaker_wm;}
+    padding-bottom: 0.5rem;
+    img{
+      width: $speaker_w;
+      @include phone { width: $speaker_wm;}
+    }
+    }
+   
+     p{
+      font-size: 1rem;
+      margin-bottom: 0;
+      padding: 0;
+      &.small_text{
+        font-size: 0.7rem;
+        line-height: 1rem;
+        opacity: 0.7;
+      }
+    }
+  
+  }
+
+
+.half_content.not_that_half{
+    flex-direction: column;
+    .neon_frame{
+      width: auto;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-end;
+      @include phone {    
+        flex-direction: column;
+       }
+
+      .box_content, figure{ 
+        width: 50%;
+        @include phone {    
+          width: 100%;
+         }
+      }
+
+      .box_content.full{
+        width: 100%;
+      }
+  }
+}
+
+
+  
