@@ -646,6 +646,10 @@ footer {
 .media_footer p {
   font-size: 0.8rem;
 }
+.media_footer .support {
+  margin: 0.5rem 0 2rem;
+  padding: 0;
+}
 
 .side_events {
   position: fixed;
