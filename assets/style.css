@@ -792,3 +792,81 @@ footer {
 .half_content.not_that_half .neon_frame .box_content.full {
   width: 100%;
 }
+
+.schedule .day {
+  width: 100%;
+  margin: 0;
+}
+.schedule .day h5 {
+  text-align: left;
+  margin-bottom: 0.2rem;
+}
+.schedule .day h5 span {
+  font-size: 3rem;
+  display: block;
+  line-height: 2.7rem;
+  color: #00E5F4;
+}
+.schedule .day h5 span.dd {
+  color: #F6EC10;
+  font-size: 1.1rem;
+  line-height: 1rem;
+  padding-left: 0.7rem;
+}
+.schedule .day ul {
+  height: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 601px) {
+  .schedule .day ul {
+    flex-direction: row;
+    width: 100%;
+  }
+}
+.schedule .day ul li {
+  border-left: 3px solid #F6EC10;
+  margin: 0;
+  padding: 0.7rem 0.4rem;
+  height: 100%;
+  display: block;
+}
+@media (min-width: 601px) {
+  .schedule .day ul li {
+    border-top: 3px solid #F6EC10;
+    border-left: none;
+    flex-grow: 1;
+  }
+}
+.schedule .day ul li h6 {
+  color: #00E5F4;
+  font-size: 0.9rem;
+}
+.schedule .day ul li:last-child {
+  flex-basis: content;
+}
+.schedule .day ul li.casa {
+  border-color: #9EEAFD;
+}
+.schedule .day ul li.casa h6 {
+  color: #F6EC10;
+}
+.schedule .day ul li.mycasa {
+  margin-top: 1rem;
+}
+@media (min-width: 601px) {
+  .schedule .day ul li.mycasa {
+    margin-top: 0;
+    margin-left: 1rem;
+  }
+}
+.schedule .day .atcasa {
+  color: #9EEAFD;
+  text-align: right;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+.schedule .day .atcasa a {
+  color: #9EEAFD;
+}
