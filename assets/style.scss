@@ -882,14 +882,23 @@ $speaker_wm: 90px;
 
   
     h5{
+
       text-align: left;
-      color: $yeallow;
+      
+     
+      
      
       span{
         font-size: 6rem;
         display: block;
         line-height: 4.6rem;
         color: $baby-blue;
+      }
+      span.dd{
+        color: $yeallow;
+        font-size: 1.1rem;
+        line-height: 1rem;
+        padding-left: 0.7rem;
       }
     }
     ul{
@@ -933,7 +942,19 @@ $speaker_wm: 90px;
         }
 
       }
+
       
+      
+    }
+    .atcasa{
+      color: $light-blue;
+      text-align: right;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      a{
+        color: $light-blue;
+      }
+
     }
   }
 }
