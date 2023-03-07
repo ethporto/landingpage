@@ -793,24 +793,12 @@ footer {
   width: 100%;
 }
 
-.schedule {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-direction: row;
-  margin: auto;
-}
 .schedule .day {
-  width: 33%;
-  padding: 0 1rem;
-  height: 100%;
-  flex-grow: 1;
+  width: 100%;
   margin: 0;
-  display: flex;
-  flex-direction: column;
 }
 .schedule .day h5 {
-  text-align: center;
+  text-align: left;
   color: #F6EC10;
 }
 .schedule .day h5 span {
@@ -825,12 +813,25 @@ footer {
   display: flex;
   flex-direction: column;
 }
+@media (min-width: 601px) {
+  .schedule .day ul {
+    flex-direction: row;
+    width: 100%;
+  }
+}
 .schedule .day ul li {
   border-left: 3px solid #F6EC10;
   margin: 0;
   padding: 0.7rem 0.4rem;
   height: 100%;
   display: block;
+}
+@media (min-width: 601px) {
+  .schedule .day ul li {
+    border-top: 3px solid #F6EC10;
+    border-left: none;
+    flex-grow: 1;
+  }
 }
 .schedule .day ul li h6 {
   color: #00E5F4;
@@ -844,4 +845,13 @@ footer {
 }
 .schedule .day ul li.casa h6 {
   color: #F6EC10;
+}
+.schedule .day ul li.mycasa {
+  margin-top: 1rem;
+}
+@media (min-width: 601px) {
+  .schedule .day ul li.mycasa {
+    margin-top: 0;
+    margin-left: 1rem;
+  }
 }
