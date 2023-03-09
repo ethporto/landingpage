@@ -149,6 +149,7 @@ h3 {
   text-align: center;
   margin: 0 auto 1rem;
   color: #F6EC10;
+  position: relative;
 }
 .tix_container h4 {
   font-size: 1.3rem;
@@ -232,12 +233,17 @@ h3 {
   background-color: #00E5F4;
   border-radius: 10px;
   padding: 0.5rem 1rem;
-  width: 100px;
+  width: 230px;
   color: #020E38;
   text-transform: uppercase;
   opacity: 0.9;
+  font-size: 1.4rem;
   position: relative;
-  transform: rotate(-5deg);
+  transform: rotate(-17deg);
+  position: absolute;
+  bottom: 4rem;
+  z-index: 21;
+  left: 20%;
 }
 
 .social_links {

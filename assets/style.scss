@@ -188,6 +188,7 @@ h3 {
   text-align: center;
   margin: 0 auto 1rem;
   color: $yeallow;
+  position: relative;
   h4{
     font-size: 1.3rem;
     &.strike{
@@ -277,12 +278,18 @@ h3 {
   background-color: $baby-blue;
   border-radius: 10px;
   padding: 0.5rem 1rem;
-  width: 100px;
+  width: 230px;
   color: $dark-blue;
   text-transform: uppercase;
   opacity: 0.9;
+  font-size: 1.4rem;
   position: relative;
-  transform: rotate(-5deg);
+  transform: rotate(-17deg);
+  position: absolute;
+  bottom: 4rem;
+  z-index: 21;
+  left: 20%;
+  
 }
 
 .social_links{
