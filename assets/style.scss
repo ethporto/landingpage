@@ -967,5 +967,19 @@ $speaker_wm: 90px;
   }
 }
 
+.two_buttons{
+  display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    a{
+      margin: 2rem 0.5rem;
+    }
+    @include big-phone {    
+      flex-direction: row;
+     
+     }
+}
+
 
   

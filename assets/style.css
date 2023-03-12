@@ -876,3 +876,18 @@ footer {
 .schedule .day .atcasa a {
   color: #9EEAFD;
 }
+
+.two_buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.two_buttons a {
+  margin: 2rem 0.5rem;
+}
+@media (min-width: 601px) {
+  .two_buttons {
+    flex-direction: row;
+  }
+}
