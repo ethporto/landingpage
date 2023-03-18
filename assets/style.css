@@ -201,6 +201,7 @@ h3 {
   color: #F6EC10;
   font-size: 2rem;
   margin-bottom: 3rem;
+  line-height: 2.4rem;
 }
 .neon_frame h4 {
   color: #9EEAFD;
@@ -890,4 +891,8 @@ footer {
   .two_buttons {
     flex-direction: row;
   }
+}
+
+.qf {
+  text-align: left;
 }

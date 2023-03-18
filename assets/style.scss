@@ -242,6 +242,7 @@ h3 {
     color: $yeallow;
     font-size: 2rem;
     margin-bottom: 3rem;
+    line-height: 2.4rem;
   }
   h4{
     color: $light-blue;
@@ -981,5 +982,7 @@ $speaker_wm: 90px;
      }
 }
 
-
+.qf{
+  text-align: left;
+}
   
